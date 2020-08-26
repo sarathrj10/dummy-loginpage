@@ -21,7 +21,7 @@ app.set('view engine','handlebars');
 
 app.use(sessions({
     name : 'sid',
-    secret : 'secret',
+    secret : 'secretkey',
     store:new mongoStore({mongooseConnection:mongoose.connection}),
     resave :false,
     saveUninitialized : false,
