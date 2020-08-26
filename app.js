@@ -7,8 +7,9 @@ const homerouter = require('./routes/home.router');
 const mongoose = require('mongoose');
 const mongoStore = require('connect-mongo')(sessions);
 const app = express();
+const MONGIDBURI = process.env.MONGIDBURI || 'mongodb://localhost/blog_app';
 
-mongoose.connect('mongodb://localhost/blog_app',{
+mongoose.connect(MONGIDBURI,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 });
